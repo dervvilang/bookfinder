@@ -1,5 +1,5 @@
-import '../../shared/style.css';
-import { fetchJSON } from '../../shared/fetcher.js';
+import './style.css';
+import { fetchJSON } from './fetcher.js';
 
 const form = document.getElementById('fx-form');
 const amountInput = document.getElementById('amount');
@@ -23,7 +23,7 @@ async function init() {
     fromSel.value = 'EUR';
     toSel.value = 'USD';
     setStatus('Готово.');
-    convert(); // первичный расчёт
+    convert();
   } catch (e) {
     setStatus(`Ошибка: ${e.message}`, true);
   }

@@ -1,5 +1,5 @@
-import '../../shared/style.css';
-import { fetchJSON } from '../../shared/fetcher.js';
+import './style.css';
+import { fetchJSON } from './fetcher.js';
 
 const form = document.getElementById('city-form');
 const cityInput = document.getElementById('city');
@@ -19,6 +19,7 @@ async function loadWeather(city) {
   setStatus('Определяем координаты…');
 
   try {
+    // 1) Геокодинг
     const geo = await fetchJSON(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1&language=ru&format=json`);
     if (!geo.results || geo.results.length === 0) {
       setStatus('Город не найден.', true);
@@ -26,6 +27,7 @@ async function loadWeather(city) {
     }
     const { latitude, longitude, name, country } = geo.results[0];
 
+    // 2) Погода
     setStatus('Получаем прогноз…');
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&timezone=auto&current=temperature_2m,wind_speed_10m&daily=temperature_2m_max,temperature_2m_min,precipitation_sum`;
     const meteo = await fetchJSON(url);

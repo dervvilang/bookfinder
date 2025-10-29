@@ -1,5 +1,5 @@
-import '../../shared/style.css';
-import { fetchJSON } from '../../shared/fetcher.js';
+import './style.css';
+import { fetchJSON } from './fetcher.js';
 
 const form = document.getElementById('book-form');
 const input = document.getElementById('query');
