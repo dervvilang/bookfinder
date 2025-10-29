@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BookFinder — Погода</title>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">📚 BookFinder</div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="search.html">Поиск книг</a>
+      <a href="currency.html">Конвертер валют</a>
+      <a href="weather.html" aria-current="page">Погода</a>
+      <a href="about.html">О проекте</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Погода по городу</h1>
+    <form id="city-form" class="form" autocomplete="off" aria-label="Форма поиска города">
+      <input id="city" type="search" placeholder="Например, Berlin" aria-label="Город" required />
+      <button type="submit">Показать</button>
+    </form>
+
+    <div id="weather-status" class="status" aria-live="polite"></div>
+
+    <section id="current" class="weather-current"></section>
+    <section id="daily" class="weather-daily grid"></section>
+  </main>
+
+  <footer class="footer">
+    <p>Данные: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></p>
+  </footer>
+
+  <script type="module" src="/src/pages/weather/main.js"></script>
+</body>
+</html>

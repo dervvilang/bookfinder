@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BookFinder — Главная</title>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">📚 BookFinder</div>
+    <nav class="nav">
+      <a href="index.html" aria-current="page">Главная</a>
+      <a href="search.html">Поиск книг</a>
+      <a href="currency.html">Конвертер валют</a>
+      <a href="weather.html">Погода</a>
+      <a href="about.html">О проекте</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Мультистраничное приложение на Vite</h1>
+      <p>Демонстрация работы с публичными API: поиск книг, конвертация валют и виджет погоды.</p>
+      <ul class="features">
+        <li>🔎 Open Library — поиск книг</li>
+        <li>💱 Frankfurter — курсы и конвертация валют</li>
+        <li>🌦️ Open-Meteo — погода и прогноз</li>
+      </ul>
+    </section>
+
+    <section class="cards">
+      <a class="card" href="search.html">
+        <h2>Поиск книг</h2>
+        <p>Найдите книги по названию, автору или ключевому слову.</p>
+      </a>
+      <a class="card" href="currency.html">
+        <h2>Конвертер валют</h2>
+        <p>Точный пересчёт суммы между валютами.</p>
+      </a>
+      <a class="card" href="weather.html">
+        <h2>Погода</h2>
+        <p>Текущая температура и прогноз по городу.</p>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 BookFinder. Учебный проект.</p>
+  </footer>
+
+  <script type="module" src="/src/pages/home/main.js"></script>
+</body>
+</html>

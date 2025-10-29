@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BookFinder — Конвертер валют</title>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">📚 BookFinder</div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="search.html">Поиск книг</a>
+      <a href="currency.html" aria-current="page">Конвертер валют</a>
+      <a href="weather.html">Погода</a>
+      <a href="about.html">О проекте</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Конвертер валют</h1>
+    <form id="fx-form" class="form" aria-label="Форма конвертации валют">
+      <input id="amount" type="number" min="0" step="0.01" value="1" aria-label="Сумма" required />
+      <select id="from" aria-label="Валюта из"></select>
+      <span class="arrow">→</span>
+      <select id="to" aria-label="Валюта в"></select>
+      <button type="submit">Конвертировать</button>
+    </form>
+
+    <div id="fx-status" class="status" aria-live="polite"></div>
+    <div id="fx-result" class="result-block"></div>
+  </main>
+
+  <footer class="footer">
+    <p>Данные: <a href="https://www.frankfurter.app/docs/" target="_blank" rel="noopener">Frankfurter API</a></p>
+  </footer>
+
+  <script type="module" src="/src/pages/currency/main.js"></script>
+</body>
+</html>

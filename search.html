@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BookFinder — Поиск книг</title>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">📚 BookFinder</div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="search.html" aria-current="page">Поиск книг</a>
+      <a href="currency.html">Конвертер валют</a>
+      <a href="weather.html">Погода</a>
+      <a href="about.html">О проекте</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Поиск книг</h1>
+    <form id="book-form" class="form" autocomplete="off" aria-label="Форма поиска книг">
+      <input id="query" name="q" type="search" placeholder="Название, автор, тема…" aria-label="Поисковый запрос" required />
+      <button type="submit">Искать</button>
+    </form>
+
+    <div id="status" class="status" aria-live="polite"></div>
+    <div id="results" class="grid"></div>
+  </main>
+
+  <footer class="footer">
+    <p>Данные: <a href="https://openlibrary.org/developers/api" target="_blank" rel="noopener">Open Library API</a></p>
+  </footer>
+
+  <script type="module" src="/src/pages/search/main.js"></script>
+</body>
+</html>
